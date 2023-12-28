@@ -2,9 +2,7 @@ package org.example
 
 import groovy.transform.Immutable
 
-@Immutable
-class Input<T> {
-    String name
-    Class<T> type
+import org.example.base.InputSlot
 
-}
+@Immutable
+class Input<T> extends InputSlot<T> {}

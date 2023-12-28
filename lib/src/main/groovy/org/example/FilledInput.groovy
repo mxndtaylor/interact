@@ -2,7 +2,9 @@ package org.example
 
 import groovy.transform.Immutable
 
-@Immutable(knownImmutable = "value")
-class FilledInput<T> extends Input<T> {
-   final T value 
+import org.example.base.InputSlot
+
+@Immutable(knownImmutables = ["value"])
+class FilledInput<T> implements InputSlot<T> {
+   final T value
 }
